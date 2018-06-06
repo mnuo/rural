@@ -93,7 +93,7 @@
 	</bean>
 	<!-- session 校验单个用户是否多次登录 -->
 	<bean id="kickoutSessionFilter"   class="org.seek.rural.core.shiro.filter.KickoutSessionFilter">  
-	    <property name="kickoutUrl" value="/u/login?kickout"/>  
+	    <property name="kickoutUrl" value="/login?kickout"/>  
 	</bean>  
 	<!-- 静态注入 jedisShiroSessionRepository-->
 	<bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
@@ -152,7 +152,7 @@
 	
 	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
 		<property name="securityManager" ref="securityManager" />
-		<property name="loginUrl" value="/u/login.shtml" />
+		<property name="loginUrl" value="/login" />
 		<!--	TODO 待提取	-->
 		<property name="successUrl" value="/" />
 		<property name="unauthorizedUrl" value="/?login" />

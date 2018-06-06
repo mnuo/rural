@@ -36,11 +36,11 @@ import net.sf.json.JSONObject;
 public class ShiroFilterUtils {
 	final static Class<? extends ShiroFilterUtils> CLAZZ = ShiroFilterUtils.class;
 	//登录页面
-	static final String LOGIN_URL = "/u/login.shtml";
+	static final String LOGIN_URL = "/login";
 	//踢出登录提示
-	final static String KICKED_OUT = "/open/kickedOut.shtml";
+	final static String KICKED_OUT = "/open/kickedOut";
 	//没有权限提醒
-	final static String UNAUTHORIZED = "/open/unauthorized.shtml";
+	final static String UNAUTHORIZED = "/open/unauthorized";
 	/**
 	 * 是否是Ajax请求
 	 * @param request

@@ -263,18 +263,18 @@
 		<!-- 其他常用包 end'-->
 
 		<!-- freemarker begin -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.freemarker</groupId>
 			<artifactId>freemarker</artifactId>
 			<version>2.3.20</version>
-		</dependency>
+		</dependency> -->
 		<!-- freemarker begin -->
 		<!-- freemarker + shiro（标签） begin -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>net.mingsoft</groupId>
 			<artifactId>shiro-freemarker-tags</artifactId>
 			<version>0.1</version>
-		</dependency>
+		</dependency> -->
 		<!-- freemarker + shiro（标签） begin -->
 		<dependency>
 			<artifactId>quartz</artifactId>

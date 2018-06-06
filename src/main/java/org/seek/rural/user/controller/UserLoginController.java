@@ -19,6 +19,7 @@ import org.seek.rural.user.manager.UserManager;
 import org.seek.rural.user.service.UUserService;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -48,7 +49,6 @@ import net.sf.json.JSONObject;
  */
 @Controller
 @Scope(value="prototype")
-@RequestMapping("u")
 public class UserLoginController extends BaseController {
 
 	@Resource
@@ -61,7 +61,7 @@ public class UserLoginController extends BaseController {
 	@RequestMapping(value="login",method=RequestMethod.GET)
 	public ModelAndView login(){
 		
-		return new ModelAndView("user/login");
+		return new ModelAndView("login");
 	}
 	/**
 	 * 注册跳转
@@ -142,8 +142,8 @@ public class UserLoginController extends BaseController {
 			LoggerUtils.fmtDebug(getClass(), "获取登录之前的URL:[%s]",url);
 			//如果登录之前没有地址，那么就跳转到首页。
 			if(StringUtils.isBlank(url)){
-				url = request.getContextPath() + "/user/index.shtml";
 			}
+			url = request.getContextPath() + "/";
 			//跳转地址
 			resultMap.put("back_url", url);
 		/**
@@ -159,7 +159,21 @@ public class UserLoginController extends BaseController {
 			
 		return resultMap;
 	}
-	
+	@RequestMapping(value="/",method=RequestMethod.GET)
+    public String index() {
+        return "redirect:/index";
+    }
+
+    /**
+     * 首页
+     *
+     * @param model
+     * @return
+     */
+	@RequestMapping(value="/index")
+    public String index(Model model) {
+        return "index";
+    }
 	/**
 	 * 退出
 	 * @return

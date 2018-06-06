@@ -42,7 +42,7 @@ public class CustomSessionManager {
 	/**
 	 * session status 
 	 */
-	public static final String SESSION_STATUS ="sojson-online-status";
+	public static final String SESSION_STATUS ="rural-online-status";
 	ShiroSessionRepository shiroSessionRepository;
 	
 	CustomShiroSessionDAO customShiroSessionDAO;
